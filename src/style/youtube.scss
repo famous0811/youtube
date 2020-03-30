@@ -1,0 +1,349 @@
+* {
+    margin: 0px;
+    // overflow:hidden;
+}
+a{
+    text-decoration: none;
+}
+
+.MainTopBar {
+    width:100%;
+    padding: 0 16px;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    box-sizing : border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    background-color:#fffffffa;
+    .SideButton{
+        margin-right:16px;
+    }
+    .Logo {
+        width: 129px;
+        height: 24px;
+        img{
+            width: 80px;
+            height: 24px; 
+        }
+    }
+
+    .Search{
+        width: 100%;
+        margin: 0 40px;
+        .SearchFrom{
+            width:100%;
+            max-width: 640px;
+            margin: 0 auto;
+            display: flex;
+
+            input{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                width: 100%;
+            }
+            button{
+                padding:1px 6px;
+                height: 30px;
+                width: 65px;
+            }
+        }
+    }
+
+    .TopBarIcon {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        min-width: 225px;
+        height:40px;
+
+        .youer{
+            width:32px;
+            height: 32px;
+            border-radius: 50px;
+            background-color:gray;
+        }
+    }
+
+    .IconSetting{
+        width:40px;
+        height: 40px;
+        padding: 8px;
+        box-sizing : border-box;
+        color: gray;
+    }
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 24px;
+    width: 240px;
+    height: 40px;
+    box-sizing : border-box;
+    .subscribe_text{
+        font-weight: 500;
+        width: auto;
+        height: 17.6px;
+        font-size: 14px;        
+    }
+
+    .subscribe_icons{
+        margin-right:24px;
+        width: 24px;
+        height: 24px;
+        color: gray;
+    }
+    &:hover{
+        background-color:#dbdbdb;
+    }
+}
+.sidebar{
+    position: fixed;
+    z-index: 1;
+    top: 56px;
+    width:200px;
+    height:92%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    padding-right: 40px;
+    z-index: 1;
+    background-color:white;
+    &:hover{
+        overflow-y: scroll;
+    }
+    &::-webkit-scrollbar{
+       width: 8px;
+       background-color: white;
+       z-index: 3;
+    }
+    &::-webkit-scrollbar-thumb{
+        height: 56px;
+        background-color:#d3d3d3;
+       
+    }
+    .side_box{
+        .advice{
+            box-sizing : border-box;
+            padding: 16px 24px 0px;
+            display: flex;
+             flex-wrap: wrap;
+            text-align: start;
+            
+            a{
+                color: gray;
+                font-size: 12px;
+                margin-right:8px;   
+            }
+            &.padding{
+                padding-top: 12px;
+            }
+        }
+    }
+    .share_boder{
+        width:400px;
+        height: 1px;
+        background-color: #dbdbdb;
+    }
+    .side_title{
+        font-weight: 550;
+        color: gray;
+        font-size: 14px;
+        padding: 8px 24px;
+    }
+    .copyright{
+        padding: 16px 24px 0px;
+        color: gray;
+        font-size: 14px;
+    }   
+}
+
+.Main_contents{
+    z-index: 0;
+   margin: 56px 0px 0px 240px;
+    height: 100%;
+    overflow: hidden;
+    background-color:#e9e9e9;
+    display: flex;
+    flex-direction: column;
+    .Maincontents{
+        margin: 0px 24px;
+        .recommendation{
+            margin-top: 24px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .post{
+            width: 100%;
+            border-top: 4px solid #0000001a;
+            .posts{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .test{
+                margin: 0px 8px 20px;
+                width: calc( 100% / 3 - 16px - .01px );
+                height: 210px;
+
+                background-color: #fff;
+                padding: 12px 24px 0 24px;
+                border: 1px solid #0000001a;
+                display: flex;
+                flex-direction:column;
+            }
+        }
+        .OtherVideo{
+            border-top: 4px solid #0000001a;
+            margin-top: 24px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    
+    .ItemTitle{
+        margin: 24px 0px 24px 8px;
+        max-width: 320px*4+16*4;
+        color: #030303;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 2.4rem;
+    }
+    .ItemVIdeo{
+        margin-left: calc(16px / 2);
+        margin-right: calc(16px / 2);
+        margin-bottom: 40px;
+        width: calc( 100% /4 - 16px - .01px);
+        display: flex;
+        flex-direction: column;
+        .VideoImg{
+            width:100%;
+            display: inline-block;
+            .Img{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background-size: 30px 40px;
+            }
+        }
+        .VideoLenders{
+            display: flex;
+            flex-direction: row;
+            .VideoOther{
+                display: flex;
+                flex-direction:column;
+                padding-right: 24px;
+                .VideoTitle{
+                    margin-top: 12px;
+                    margin-bottom: 6px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height:20px;
+                    max-height: 40px;
+                }
+                .VideoData{
+                    display: flex;
+                    color: #030303;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height:20px;
+                    .VideoAnd{
+                        margin: 0px 4px;
+                    }
+                }
+            }
+            .VideoLogo{
+                width:52px;
+                height:36px;
+                background-color:black;
+                border-radius: 50%;
+                margin: 12px 12px 0px 0px;
+                overflow: hidden;
+            }
+        }
+    }
+    .ItemPost{
+        margin: 0px 8px 20px;
+        width: calc( 100% / 3 - 16px - .01px );
+        height: 210px;
+        background-color: #fff;
+        box-sizing : border-box;
+        border: 1px solid #0000001a;
+        .Post{
+            padding: 12px 24px 0 24px;
+            height: 210px;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            box-sizing : border-box;
+            .PostWriter{
+                display: flex;
+                flex-direction: row;
+                .PostData{
+                    display: flex;
+                    color: #606060;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height:20px;
+                    .PostAnd{
+                        margin: 0px 4px;
+                    }
+                }
+                .PostLogo{
+                    width:24px;
+                    height:24px;
+                    margin-right: 12px;
+                    background-color:black;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            .MainText{
+                display: flex;
+                flex-direction: row;
+                .text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    overflow: hidden;
+                    margin-right:16px;
+                    max-height: 100px;
+                }
+                .poto{
+                    width: 116px;
+                    height: 116px;
+                    img{
+                        width: 116px;
+                        height: 116px;
+                    }
+                }
+            }
+            .Side{
+                display: flex;
+                flex-direction:row;
+                justify-content:space-between;
+                .thumb{
+                    display: flex;
+                    flex-direction: row;
+                    color: gray;
+                }
+            }
+        }
+        
+
+    }
+    
+}
